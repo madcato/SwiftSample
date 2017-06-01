@@ -1,8 +1,12 @@
 repository: madcato/SwiftSample
 
 install:
-  - git push
+  - git pull
   - swift build
 
 script:
-  - .build/debug/SwiftSample
+  - .build/debug/SwiftSample > output.log
+
+after_script:
+  - git add .
+  - git push
