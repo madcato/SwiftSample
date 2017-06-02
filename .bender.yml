@@ -3,10 +3,10 @@ repository: madcato/SwiftSample
 install:
   - git pull
   - swift build
-  - mkdir log
+  - mkdir -p log
 
 script:
-  - .build/debug/SwiftSample > ./log/output.log
+  - .build/debug/SwiftSample 2> ./log/output.log
 
 after_script:
   - git add .
