@@ -6,7 +6,7 @@ install:
   - mkdir -p log
 
 script:
-  - .build/debug/SwiftSample 2> ./log/output.log
+  - .build/debug/SwiftSample > ./log/output.log
 
 after_script:
   - git add .
